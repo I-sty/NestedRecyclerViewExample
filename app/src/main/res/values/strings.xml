@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">NestedRecyclerViewExample</string>
+    <string name="label_iso">ISO</string>
+    <string name="label_sensor_type">Sensor type</string>
+    <string name="label_camera_type">Camera type</string>
+    <string name="label_category_type">Category</string>
+    <string name="label_focus_points">Focus points</string>
+    <string name="label_true_resolution">True resolution</string>
 </resources>
