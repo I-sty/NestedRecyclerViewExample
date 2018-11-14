@@ -6,4 +6,11 @@
     <string name="label_category_type">Category</string>
     <string name="label_focus_points">Focus points</string>
     <string name="label_true_resolution">True resolution</string>
+    <string name="label_price">Price</string>
+    <string name="label_announced">Announced</string>
+    <string name="label_rating">Rating</string>
+    <string name="label_mirrorless">Mirrorless</string>
+    <string name="label_dslr">DSLR</string>
+    <string name="label_dx">DX</string>
+    <string name="label_fx">FX</string>
 </resources>

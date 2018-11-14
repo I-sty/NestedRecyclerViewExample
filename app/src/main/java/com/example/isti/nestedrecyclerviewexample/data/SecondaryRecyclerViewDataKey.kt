@@ -1,3 +1,6 @@
 package com.example.isti.nestedrecyclerviewexample.data
 
-class SecondaryRecyclerViewDataKey(val label: String, val value: String)
+import com.example.isti.nestedrecyclerviewexample.controller.SecondaryViewTypes
+
+class SecondaryRecyclerViewDataKey(val label: String, val value: String, val type: SecondaryViewTypes =
+        SecondaryViewTypes.NORMAL)

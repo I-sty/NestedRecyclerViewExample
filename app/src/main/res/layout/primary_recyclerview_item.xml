@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -21,28 +20,26 @@
 
             <ImageView
                 android:id="@+id/primary_recyclerview_item_image_image"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_marginStart="8dp"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:contentDescription="@null"
-                android:scaleType="fitCenter"
-                android:src="@android:drawable/ic_menu_compass"
-                card_view:layout_constraintStart_toStartOf="parent"
-                card_view:layout_constraintTop_toTopOf="parent" />
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@id/separator" />
 
             <TextView
                 android:id="@+id/primary_recycler_view_item_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="16dp"
                 android:fontFamily="sans-serif"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textStyle="bold"
-                card_view:layout_constraintEnd_toStartOf="@+id/primary_recyclerview_item_image_collapse"
-                card_view:layout_constraintStart_toEndOf="@+id/primary_recyclerview_item_image_image"
+                card_view:layout_constraintEnd_toEndOf="@+id/primary_recyclerview_item_image_collapse"
+                card_view:layout_constraintStart_toStartOf="parent"
                 card_view:layout_constraintTop_toTopOf="parent"
                 tools:text="title" />
 
@@ -55,6 +52,7 @@
                 android:contentDescription="@null"
                 android:scaleType="fitCenter"
                 android:src="@android:drawable/arrow_down_float"
+                android:visibility="gone"
                 card_view:layout_constraintEnd_toEndOf="parent"
                 card_view:layout_constraintTop_toTopOf="parent" />
 
@@ -68,6 +66,71 @@
                 card_view:layout_constraintStart_toStartOf="parent"
                 card_view:layout_constraintTop_toBottomOf="@id/primary_recycler_view_item_label" />
 
+            <TextView
+                android:id="@+id/primary_recycler_view_item_label_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_price"
+                android:textStyle="bold"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/separator" />
+
+            <TextView
+                android:id="@+id/primary_recycler_view_item_value_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                card_view:layout_constraintStart_toEndOf="@+id/primary_recycler_view_item_label_price"
+                card_view:layout_constraintTop_toBottomOf="@+id/separator"
+                tools:text="$ 1245" />
+
+            <TextView
+                android:id="@+id/primary_recycler_view_item_label_announced_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_announced"
+                android:textStyle="bold"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/primary_recycler_view_item_label_price" />
+
+            <TextView
+                android:id="@+id/primary_recycler_view_item_value_announced_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                card_view:layout_constraintStart_toEndOf="@+id/primary_recycler_view_item_label_announced_date"
+                card_view:layout_constraintTop_toBottomOf="@+id/primary_recycler_view_item_label_price"
+                tools:text="15 Jan 2018" />
+
+            <TextView
+                android:id="@+id/primary_recycler_view_item_label_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_rating"
+                android:textStyle="bold"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/primary_recycler_view_item_label_announced_date" />
+
+            <RatingBar
+                android:id="@+id/primary_recycler_view_item_bar_rating"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginStart="16dp"
+                android:rating="3.5"
+                android:stepSize="0.5"
+                card_view:layout_constraintBottom_toBottomOf="@+id/primary_recycler_view_item_label_rating"
+                card_view:layout_constraintStart_toEndOf="@+id/primary_recycler_view_item_label_rating"
+                card_view:layout_constraintTop_toTopOf="@+id/primary_recycler_view_item_label_rating" />
+
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/secondary_recycler_view"
                 android:layout_width="0dp"
@@ -79,12 +142,10 @@
                 android:nestedScrollingEnabled="false"
                 android:orientation="horizontal"
                 android:overScrollMode="never"
-                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
                 card_view:layout_constraintBottom_toBottomOf="parent"
                 card_view:layout_constraintEnd_toEndOf="parent"
                 card_view:layout_constraintStart_toStartOf="parent"
-                card_view:layout_constraintTop_toBottomOf="@+id/separator"
-                tools:listitem="@layout/secondary_recyclerview_item" />
+                card_view:layout_constraintTop_toBottomOf="@+id/primary_recyclerview_item_image_image" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

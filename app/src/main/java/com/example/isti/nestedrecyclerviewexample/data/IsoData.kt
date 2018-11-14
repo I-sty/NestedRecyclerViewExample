@@ -1,6 +1,9 @@
 package com.example.isti.nestedrecyclerviewexample.data
 
-enum class IsoData(val iso: Int) {
+/**
+ * Created by István Szőllősi on 11/12/2018.
+ */
+enum class IsoData(private val iso: Int) {
     ISO_50(50), ISO_64(64), ISO_100(100), ISO_125(125), ISO_160(160), ISO_200(200), ISO_250(250),
     ISO_320
             (320),

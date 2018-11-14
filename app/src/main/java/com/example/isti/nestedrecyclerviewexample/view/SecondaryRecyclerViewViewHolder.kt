@@ -8,7 +8,7 @@ import com.example.isti.nestedrecyclerviewexample.data.SecondaryRecyclerViewData
 
 class SecondaryRecyclerViewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     var value: TextView = itemView.findViewById(R.id.secondary_recycler_view_item_value)
-    var label: TextView = itemView.findViewById(R.id.secondary_recycler_view_item_label)
+    private var label: TextView = itemView.findViewById(R.id.secondary_recycler_view_item_label)
 
     fun bind(specs: SecondaryRecyclerViewDataKey) {
         value.text = specs.value
