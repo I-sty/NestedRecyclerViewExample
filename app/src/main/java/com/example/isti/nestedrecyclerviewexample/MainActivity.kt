@@ -26,9 +26,9 @@ class MainActivity : AppCompatActivity() {
         val secondaryRecyclerViewPool = RecyclerView.RecycledViewPool()
 
 
-        secondaryRecyclerViewPool.setMaxRecycledViews(SecondaryViewTypes.NORMAL.ordinal, Companion.MAX_VIEWTYPES_IN_POOL)
-        secondaryRecyclerViewPool.setMaxRecycledViews(SecondaryViewTypes.CAMERA.ordinal, Companion.MAX_VIEWTYPES_IN_POOL)
-        secondaryRecyclerViewPool.setMaxRecycledViews(SecondaryViewTypes.SENSOR.ordinal, Companion.MAX_VIEWTYPES_IN_POOL)
+        secondaryRecyclerViewPool.setMaxRecycledViews(SecondaryViewTypes.NORMAL.ordinal, MAX_VIEWTYPES_IN_POOL)
+        secondaryRecyclerViewPool.setMaxRecycledViews(SecondaryViewTypes.CAMERA.ordinal, MAX_VIEWTYPES_IN_POOL)
+        secondaryRecyclerViewPool.setMaxRecycledViews(SecondaryViewTypes.SENSOR.ordinal, MAX_VIEWTYPES_IN_POOL)
 
         my_recycler_view.adapter = PrimaryRecyclerViewAdapter(items, secondaryRecyclerViewPool)
     }
